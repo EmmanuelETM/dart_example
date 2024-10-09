@@ -1,9 +1,9 @@
 // Class
 class Student {
-  String name = '';
-  int age = 0;
-  String id = '';
-  String career = '';
+  String name;
+  int age;
+  String id;
+  String career;
 
   //constructor
   Student(this.name, this.age, this.id, this.career);
@@ -68,8 +68,15 @@ void main() {
   recursiveString("apple");
   hello_world(); 
 
-  //lists and maps
-  List<int> intList = [1, 2, 3, 4, 5, 6];
+  //lists, sets and maps
+
+  List<int> intList = [1, 2, 3, 4, 5, 6];  
+  var newList = intList.where((x) => x > 4).toList(); 
+  print((intList, newList));
+
+  var bodyParts = {'Shoulders', 'legs', 'arms', 'hands', 'fingers'};
+  bodyParts.add('wowsers');
+
   Map<String, String> colors = {
     'red': '#FF0000',
     'green': '00FF00',
@@ -77,13 +84,17 @@ void main() {
   };
 
   //loops
-  for (var numb in intList) {
-    print(numb);
-  }
 
   colors.forEach((name, hex) {
     print('${name}, ${hex}');
   });
+
+  var count = 0;
+
+  while (count < 10) {
+    count++;
+    print(count);   
+  }
   
 
 }
