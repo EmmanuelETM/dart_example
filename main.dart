@@ -29,9 +29,47 @@ class Student {
   }
 }
 
+int integer_calculator(int a, int b, int operator){
+  if (operator == 1){
+    return a + b;
+  }else if(operator == 2){
+    return a - b;
+  }else if(operator == 3){
+    return a * b;
+  }else if (operator == 4) {
+    return a~/b;
+  }
+  return 0;
+}
+
+void hello_world(){
+  print("hello world");
+}
+
+void recursiveString(String string){
+  print(string);
+  if(string.length == 1){
+    print(string);
+  }else {
+    print(string);
+    recursiveString(string.substring(0, string.length - 1));
+    print(string);
+  }
+}
+
+
 void main() {
 
   var student1 = Student('Emmanuel Torres Malena', 20, '2021-1097', 'ISC'); //Instanciate a class
-  print(student1.getName);
+  print(student1.getName, );
+
+  //invoke a function
+  print(integer_calculator(10, 5, 1));
+  recursiveString("apple");
+  hello_world(); 
+
+  //lists and maps
+
+  
 
 }
