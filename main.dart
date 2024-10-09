@@ -69,7 +69,21 @@ void main() {
   hello_world(); 
 
   //lists and maps
+  List<int> intList = [1, 2, 3, 4, 5, 6];
+  Map<String, String> colors = {
+    'red': '#FF0000',
+    'green': '00FF00',
+    'blue': '0000FF',
+  };
 
+  //loops
+  for (var numb in intList) {
+    print(numb);
+  }
+
+  colors.forEach((name, hex) {
+    print('${name}, ${hex}');
+  });
   
 
 }
